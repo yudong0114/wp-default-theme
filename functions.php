@@ -43,3 +43,6 @@ function top_widgets_init() {
     ]);
 }
 add_action( 'widgets_init', 'top_widgets_init' );
+
+// 商品紹介用のウィジェット
+require_once __DIR__ . '/widgets/product-widget.php';
