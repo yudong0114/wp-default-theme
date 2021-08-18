@@ -2,8 +2,17 @@
 <article>
     <h1>固定ページ</h1>
     <?php
-    // コンテンツの出力
-    the_content();
+    // pagebreak用に詳細記事のループ
+    while (have_posts()){
+        // メインループに記事をセット
+        the_post();
+        // コンテンツの出力
+        the_content();
+        // ページ分割のページネーション
+        wp_link_pages([
+            'pagelink' => '%ページ',
+        ]);
+    }
     ?>
 </article>
 <?php get_footer(); ?>
