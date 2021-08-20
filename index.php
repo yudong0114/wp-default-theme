@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<article>
-    <h1>indexファイル</h1>
+<article class="content">
+    <h1 class="content__title">indexファイル</h1>
 </article>
 <?php get_footer(); ?>

@@ -9,5 +9,5 @@
 <header class="header">
     <p>ヘッダー</p>
 </header>
-<main>
+<main class="main">
 

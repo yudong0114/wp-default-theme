@@ -1,6 +1,7 @@
 <?php get_header(); ?>
-<article>
-    <h1>固定ページ</h1>
+<article class="content">
+    <h1 class="content__title">固定ページ</h1>
+    <div class="content__detail">
     <?php
     // pagebreak用に詳細記事のループ
     while (have_posts()){
@@ -14,5 +15,6 @@
         ]);
     }
     ?>
+    </div>
 </article>
 <?php get_footer(); ?>

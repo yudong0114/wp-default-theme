@@ -1,6 +1,22 @@
-header,
-footer {
+.header,
+.footer {
   padding: 20px 0;
   text-align: center;
   background: #FCC;
+}
+.main {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.content__title {
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid;
+}
+.content__detail {
+  padding: 20px;
+}
+.widget {
+  padding: 20px 0;
 }
