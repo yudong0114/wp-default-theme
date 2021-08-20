@@ -7,7 +7,15 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="header">
-    <p>ヘッダー</p>
+    <div class="header__inner">
+        <div class="header__logo"><a href="<?php echo home_url(); ?>">ヘッダーロゴ</a></div>
+        <?php
+        wp_nav_menu( [ 
+            'container_class' => 'header__nav-container',
+            'menu_class' => 'header__nav-list' 
+        ] );
+        ?>
+    </div>
 </header>
 <main class="main">
 

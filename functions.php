@@ -29,13 +29,26 @@ function common_scripts_css() {
 }
 add_action( 'wp_enqueue_scripts', 'common_scripts_css' );
 
+// ヘッダーナビゲーションのコンテンツをウィジェットエリア
+function header_widgets_init() {
+    register_sidebar([
+        'name' => 'ヘッダー',
+        'id' => 'header-nav',
+        'class' => 'header-nav',
+        'description' => 'ヘッダーメニューのウィジェット',
+        'before_widget' => '<nav id="header__nav %1$s" class="header__nav %2$s">',
+        'after_widget' => '</nav>',
+    ]);
+}
+add_action( 'widgets_init', 'header_widgets_init' );
+
 // TOPのコンテンツをウィジェットエリア
 function top_widgets_init() {
     register_sidebar([
-        'name' => 'TOP',
+        'name' => 'TOPコンテンツ',
         'id' => 'top-widget',
         'class' => 'top-widget',
-        'description' => 'TOPのウィジェット',
+        'description' => 'TOPコンテンツのウィジェット',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h2 class="widget__title">',

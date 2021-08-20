@@ -4,7 +4,24 @@
   text-align: center;
   background: #FCC;
 }
-.main {
+.header__inner {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  flex-basis: 10%;
+}
+.header__nav-container {
+  flex-basis: 80%;
+}
+.header__nav-list {
+  display: flex;
+  justify-content: space-around;
+}
+.content {
   width: 1000px;
   margin: 0 auto;
   padding: 20px 0;
