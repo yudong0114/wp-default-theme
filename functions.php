@@ -29,6 +29,20 @@ function common_scripts_css() {
 }
 add_action( 'wp_enqueue_scripts', 'common_scripts_css' );
 
+/**
+ * 記事一覧をarchive.phpテンプレを使用
+ */
+function post_has_archive( $args, $post_type ) {
+    if ( 'post' == $post_type ) {
+        // パーマリンクのリライト
+        $args['rewrite'] = true;
+        // URLとして使いたい文字列
+        $args['has_archive'] = 'news';
+    }
+    return $args;
+    }
+    add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
 // ヘッダーナビゲーションのコンテンツをウィジェットエリア
 function header_widgets_init() {
     register_sidebar([

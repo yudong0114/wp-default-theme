@@ -6,6 +6,8 @@
 | --- | --- |
 | TOP | front-page.php |
 | 固定ページ | page.php |
+| アーカイブ | archive.php |
+| 詳細 | single.php |
 | その他(関連コンテンツ) | index.php |
 | 404 | 404.php |
 | ヘッダー(パーツ) | header.php |
@@ -15,9 +17,9 @@
 | テーマのキャプチャ | screenshot.png |
 
 ### ファイル構成(今後追加)
-| アーカイブ | archive.php |
+| 種別 | ファイル名 |
+| --- | --- |
 | 検索結果 | search.php |
-| 詳細 | single.php |
 | サイドバー(パーツ) | sidebar.php |
 | 検索フォーム(パーツ) | searchform.php |
 | 詳細コンテンツ(パーツ) | content.php |
