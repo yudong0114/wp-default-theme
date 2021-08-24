@@ -56,6 +56,21 @@ function header_widgets_init() {
 }
 add_action( 'widgets_init', 'header_widgets_init' );
 
+// サイドバーのコンテンツをウィジェットエリア
+function sidebar_widgets_init() {
+    register_sidebar([
+        'name' => 'サイドバー',
+        'id' => 'sidebar',
+        'class' => 'sidebar',
+        'description' => 'サイドバーのウィジェット',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<p class="widgets__title">',
+        'after_title' => '</p>',
+    ]);
+}
+add_action( 'widgets_init', 'sidebar_widgets_init' );
+
 // TOPのコンテンツをウィジェットエリア
 function top_widgets_init() {
     register_sidebar([

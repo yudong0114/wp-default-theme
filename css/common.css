@@ -26,13 +26,24 @@
   margin: 0 auto;
   padding: 20px 0;
 }
+.content__inner {
+  display: flex;
+  justify-content: space-between;
+}
 .content__title {
   margin: 0 0 20px;
   padding: 0 0 10px;
   border-bottom: 1px solid;
 }
 .content__detail {
+  margin-right: 10%;
   padding: 20px;
+  background: #CFC;
+  flex: 3;
+}
+.sidebar {
+  background: #EEF;
+  flex: 1;
 }
 .widget {
   padding: 20px 0;
