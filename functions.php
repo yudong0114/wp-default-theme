@@ -71,6 +71,19 @@ function sidebar_widgets_init() {
 }
 add_action( 'widgets_init', 'sidebar_widgets_init' );
 
+// TOPのスライダーのウィジェットエリア
+function top_slider_widgets_init() {
+    register_sidebar([
+        'name' => 'TOPファーストビュースライダー',
+        'id' => 'top-slider',
+        'class' => 'top-slider',
+        'description' => 'TOPファーストビュースライダー',
+        'before_widget' => '<div id="%1$s top-slider" class="widget %2$s top-slider">',
+        'after_widget' => '</div>',
+    ]);
+}
+add_action( 'widgets_init', 'top_slider_widgets_init' );
+
 // TOPのコンテンツをウィジェットエリア
 function top_widgets_init() {
     register_sidebar([

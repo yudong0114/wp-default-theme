@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+<?php
+// TOPスライダー用ウィジェット
+if (is_active_sidebar('top-slider')) {
+    dynamic_sidebar('top-slider');
+}
+?>
 <article class="content">
     <div class="content__inner">
         <div class="content__detail">
